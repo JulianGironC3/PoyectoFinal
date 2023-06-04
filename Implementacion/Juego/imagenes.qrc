@@ -2,5 +2,7 @@
     <qresource prefix="/">
         <file>imagenes/asset-generation-edefd626-2631-4eb9-9d5e-bae60f6dc727-3-small.jpg</file>
         <file>imagenes/asset-generation-5ab129bf-d3fa-4b03-ad18-d6201f48ae00-3-small.jpg</file>
+        <file>imagenes/pngtree-cute-cartoon-mushroom-png-image_4270983.png</file>
+        <file>imagenes/destroyableBlock.png</file>
     </qresource>
 </RCC>

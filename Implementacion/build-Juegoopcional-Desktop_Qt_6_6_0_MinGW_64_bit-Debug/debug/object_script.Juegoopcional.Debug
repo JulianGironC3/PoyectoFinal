@@ -1,0 +1,12 @@
+debug/hongo.o
+debug/main.o
+debug/mainwindow.o
+debug/meteoro.o
+debug/movimientos.o
+debug/obstaculo.o
+debug/personaje.o
+debug/qrc_imge.o
+debug/moc_hongo.o
+debug/moc_mainwindow.o
+debug/moc_meteoro.o
+debug/moc_obstaculo.o

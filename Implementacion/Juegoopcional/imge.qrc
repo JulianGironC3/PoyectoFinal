@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/">
+        <file>image/asset-generation-5ab129bf-d3fa-4b03-ad18-d6201f48ae00-3-small.jpg</file>
+        <file>image/asset-generation-edefd626-2631-4eb9-9d5e-bae60f6dc727-3-small.jpg</file>
+        <file>image/destroyableBlock.png</file>
+        <file>image/pngtree-cute-cartoon-mushroom-png-image_4270983.png</file>
+        <file>image/meteoro.png</file>
+        <file>image/pngtree-cute-meteor-clip-art-png-image_2736145.jpg</file>
+        <file>image/fondo-plano-naturaleza.jpg</file>
+    </qresource>
+</RCC>

@@ -14,6 +14,7 @@ SOURCES += \
     mainwindow.cpp \
     meteoro_producto.cpp \
     meteoros.cpp \
+    obstaculo.cpp \
     personaje.cpp
 
 HEADERS += \
@@ -21,6 +22,7 @@ HEADERS += \
     mainwindow.h \
     meteoro_producto.h \
     meteoros.h \
+    obstaculo.h \
     personaje.h
 
 FORMS += \

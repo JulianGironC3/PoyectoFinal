@@ -7,16 +7,28 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    scene=new QGraphicsScene();
-    scene->setSceneRect(0,0,700,500);
-    ui->graphicsView->setScene(scene);
+    scene = new QGraphicsScene(); //creamos la escena
+
+    scene->setSceneRect(0,0,700,500); // agaregamos el rectangulo
+    ui->graphicsView->setScene(scene); // pintamos en rectangulo
     scene->addRect(scene->sceneRect());
-    scene->setBackgroundBrush(QBrush(QImage(":/imagenes/asset-generation-5ab129bf-d3fa-4b03-ad18-d6201f48ae00-3-small.jpg")));
+    //scene->setBackgroundBrush(QBrush(QImage(":/imagenes/asset-generation-5ab129bf-d3fa-4b03-ad18-d6201f48ae00-3-small.jpg")));
+
 
 
     player = new personaje();
-    player->posicion(0,450);
+    player->posicion(0,0);
     scene->addItem(player);
+
+    //obstaculos
+    hon = new hongo();
+    hon->posiciono(100,0);
+    scene->addItem(hon);
+
+    o = new obstaculo();
+    o->posiciono(50,50);
+    scene->addItem(o);
+
 
 
 
@@ -43,13 +55,13 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
     VX = VX + AX*dt;
     VY = VY + AY*dt; */
 {
-    if(event->key()== Qt::Key_D and player->getPx()>0){
+    if(event->key()== Qt::Key_D and player->getPx()<650){
          player->setPx(player->getPx()+10);
         //player->set_vel(10,player->getVy(),player->getPx(),player->getPy());
     }
 
-    if(event->key()== Qt::Key_A and player->getPx()<650){
-        player->setPy(player->getPx()-10);
+    if(event->key()== Qt::Key_A and player->getPx()>0){
+        player->setPx(player->getPx()-10);
         //player->set_vel(-10,player->getVy(),player->getPx(),player->getPy());
     }
 

@@ -1,0 +1,12 @@
+release/hongo.o
+release/main.o
+release/mainwindow.o
+release/meteoro.o
+release/movimientos.o
+release/obstaculo.o
+release/personaje.o
+release/qrc_imge.o
+release/moc_hongo.o
+release/moc_mainwindow.o
+release/moc_meteoro.o
+release/moc_obstaculo.o
