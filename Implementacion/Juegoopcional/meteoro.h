@@ -14,7 +14,7 @@ class meteoro: public QObject, public QGraphicsPixmapItem
 {
     Q_OBJECT
 public:
-    meteoro(QGraphicsItem* carr = 0);
+    meteoro(int o,QGraphicsItem* carr = 0);
 
     float getX() const;
     void setX(float newX);

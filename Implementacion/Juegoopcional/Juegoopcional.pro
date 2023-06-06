@@ -9,21 +9,27 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    arbol.cpp \
     hongo.cpp \
     main.cpp \
     mainwindow.cpp \
     meteoro.cpp \
+    meteoroproducto.cpp \
     movimientos.cpp \
     obstaculo.cpp \
-    personaje.cpp
+    personaje.cpp \
+    poder.cpp
 
 HEADERS += \
+    arbol.h \
     hongo.h \
     mainwindow.h \
     meteoro.h \
+    meteoroproducto.h \
     movimientos.h \
     obstaculo.h \
-    personaje.h
+    personaje.h \
+    poder.h
 
 FORMS += \
     mainwindow.ui

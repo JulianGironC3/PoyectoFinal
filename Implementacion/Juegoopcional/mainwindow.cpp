@@ -17,7 +17,11 @@ MainWindow::MainWindow(QWidget *parent)
 
     timerll = new QTimer();
     connect(timerll, SIGNAL(timeout()),this,SLOT(lluvia()));
-    timerll->start(1000);
+    timerll->start(1500);
+
+    timerllp = new QTimer();
+    connect(timerllp, SIGNAL(timeout()),this,SLOT(lluviap()));
+    timerllp->start(10000);
 
     timerp=new QTimer();
     connect(timerp, SIGNAL(timeout()),this,SLOT(actualizar()));
@@ -93,13 +97,17 @@ void MainWindow::actualizar()
 
 void MainWindow::lluvia()
 {
-    meteoro *meteoro1= new meteoro();
+   // meteoro *meteoro1= new meteoro();
+    int random_numberp=rand()%10;//poner el tamño total de la pantalla menos lo que ida el enemigo de ancho
+    cout << random_numberp;
+    lluviam.push_back(new meteoro(random_numberp));
 
-    int random_number=rand()%700;//poner el tamño total de la pantalla menos lo que ida el enemigo de ancho
+    int random_number=rand()%1200;//poner el tamño total de la pantalla menos lo que ida el enemigo de ancho
     cout << random_number;
-    meteoro1->setX(random_number);
-    meteoro1->setPos(meteoro1->getX(),0);
-    scene->addItem(meteoro1);
+    lluviam.last()->setX(random_number);
+    qDebug()<< lluviam.last()->getX();
+    lluviam.last()->setPos(lluviam.last()->getX(),0);
+    scene->addItem(lluviam.last());
 }
 
 void MainWindow::bordescollision(movimientos *b)
@@ -116,5 +124,76 @@ void MainWindow::bordescollision(movimientos *b)
     if(b->get_posY()>v_limit){//choque con el borde inferior.
         b->set_vel(b->get_velX(),-1*b->get_e()*b->get_velY(), b->get_posX(), v_limit-b->get_Radio());
     }
+
+    for(auto item:lluviam){//colisiones con el personaje
+
+    }
+    for(auto item2:poderm){
+
+    }
+    for(auto item3:productos){
+
+    }
+
+
+
+
+
+
+
+    for(int j=0 ;j< lluviam.size();j++){ //desaparece lluvia meteoros
+        meteoro *cayo= lluviam.at(j);
+        if(cayo->getY()>v_limit-100){
+                //for(auto item: lluviam )
+                scene->removeItem(cayo);
+                lluviam.removeOne(cayo);
+        }
+    }
+
+    for(int j=0 ;j< poderm.size();j++){ // desaparece poder
+        poder *cayop= poderm.at(j);
+        if(cayop->getY()>v_limit-100){
+                //for(auto item: lluviam )
+                qDebug() << "desaparecio poder";
+                scene->removeItem(cayop);
+                poderm.removeOne(cayop);
+        }
+    }
+
+
+
+/*
+    QList<meteoro*>::iterator it;
+    for(it = lluviam.begin(); it != lluviam.end(); ++it){
+        meteoro *cayo= *it;
+        if(cayo->getY()>v_limit){//choque con el borde inferior.
+            lluviam.last()->
+        }
+    }*/
+
+
+
+
+}
+
+void MainWindow::lluviap()
+{
+    poderm.push_back(new poder);
+
+    int random_number=rand()%1200;//poner el tamño total de la pantalla menos lo que ida el enemigo de ancho
+    cout << random_number;
+    poderm.last()->setX(random_number);
+    poderm.last()->setPos(poderm.last()->getX(),0);
+    scene->addItem(poderm.last());
+
+
+/*
+    poder *meteorop= new poder();
+
+    int random_number2=rand()%1200;//poner el tamño total de la pantalla menos lo que ida el enemigo de ancho
+    cout << random_number2;
+    meteorop->setPos(random_number2,0);
+    scene->addItem(meteorop);
+*/
 }
 

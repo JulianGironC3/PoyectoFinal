@@ -1,19 +1,43 @@
 #include "meteoro.h"
 
-meteoro::meteoro(QGraphicsItem *carr)
+meteoro::meteoro(int o,QGraphicsItem *carr)
 {
-    setPixmap(QPixmap(":/image/meteoro.png"));
+    //setPixmap(QPixmap(":/image/meteoro.png"));
+
+    switch (o){
+    case 0:  setPixmap(QPixmap(":/image/0.png"));
+        break;
+    case 1:  setPixmap(QPixmap(":/image/1.png"));
+        break;
+    case 2:  setPixmap(QPixmap(":/image/2.png"));
+        break;
+    case 3:  setPixmap(QPixmap(":/image/3.png"));
+        break;
+    case 4:  setPixmap(QPixmap(":/image/4.png"));
+        break;
+    case 5:  setPixmap(QPixmap(":/image/5.png"));
+        break;
+    case 6:  setPixmap(QPixmap(":/image/6.png"));
+        break;
+    case 7:  setPixmap(QPixmap(":/image/7.png"));
+        break;
+    case 8:  setPixmap(QPixmap(":/image/8.png"));
+        break;
+    case 9:  setPixmap(QPixmap(":/image/9.png"));
+        break;
+    }
+
 
     //Conexion
     QTimer *timerm =new QTimer();
     connect (timerm, SIGNAL(timeout()),this,SLOT(move()));
-    timerm ->start(50);
+    timerm ->start(40);
 
     qDebug() << "relog";
 }
 
 void meteoro::move()
-{   x+=2;
+{   x+=1.5;
     y+=5;
     posicion(x,y);
     qDebug() << "posicion";
