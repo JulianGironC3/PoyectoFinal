@@ -48,11 +48,13 @@ static constexpr auto qt_meta_stringdata_CLASSMainWindowENDCLASS = QtMocHelpers:
     "bordescollision",
     "movimientos*",
     "b",
-    "lluviap"
+    "lluviap",
+    "lluviaproduct",
+    "lluviar"
 );
 #else  // !QT_MOC_HAS_STRING_DATA
 struct qt_meta_stringdata_CLASSMainWindowENDCLASS_t {
-    uint offsetsAndSizes[22];
+    uint offsetsAndSizes[26];
     char stringdata0[11];
     char stringdata1[14];
     char stringdata2[1];
@@ -64,6 +66,8 @@ struct qt_meta_stringdata_CLASSMainWindowENDCLASS_t {
     char stringdata8[13];
     char stringdata9[2];
     char stringdata10[8];
+    char stringdata11[14];
+    char stringdata12[8];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_CLASSMainWindowENDCLASS_t::offsetsAndSizes) + ofs), len 
@@ -79,7 +83,9 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSMainWindowENDCLASS_t qt_meta_st
         QT_MOC_LITERAL(61, 15),  // "bordescollision"
         QT_MOC_LITERAL(77, 12),  // "movimientos*"
         QT_MOC_LITERAL(90, 1),  // "b"
-        QT_MOC_LITERAL(92, 7)   // "lluviap"
+        QT_MOC_LITERAL(92, 7),  // "lluviap"
+        QT_MOC_LITERAL(100, 13),  // "lluviaproduct"
+        QT_MOC_LITERAL(114, 7)   // "lluviar"
     },
     "MainWindow",
     "keyPressEvent",
@@ -91,7 +97,9 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSMainWindowENDCLASS_t qt_meta_st
     "bordescollision",
     "movimientos*",
     "b",
-    "lluviap"
+    "lluviap",
+    "lluviaproduct",
+    "lluviar"
 };
 #undef QT_MOC_LITERAL
 #endif // !QT_MOC_HAS_STRING_DATA
@@ -103,7 +111,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-       5,   14, // methods
+       7,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -111,17 +119,21 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    1,   44,    2, 0x0a,    1 /* Public */,
-       5,    0,   47,    2, 0x0a,    3 /* Public */,
-       6,    0,   48,    2, 0x0a,    4 /* Public */,
-       7,    1,   49,    2, 0x0a,    5 /* Public */,
-      10,    0,   52,    2, 0x0a,    7 /* Public */,
+       1,    1,   56,    2, 0x0a,    1 /* Public */,
+       5,    0,   59,    2, 0x0a,    3 /* Public */,
+       6,    0,   60,    2, 0x0a,    4 /* Public */,
+       7,    1,   61,    2, 0x0a,    5 /* Public */,
+      10,    0,   64,    2, 0x0a,    7 /* Public */,
+      11,    0,   65,    2, 0x0a,    8 /* Public */,
+      12,    0,   66,    2, 0x0a,    9 /* Public */,
 
  // slots: parameters
     QMetaType::Void, 0x80000000 | 3,    4,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void, 0x80000000 | 8,    9,
+    QMetaType::Void,
+    QMetaType::Void,
     QMetaType::Void,
 
        0        // eod
@@ -147,6 +159,10 @@ Q_CONSTINIT const QMetaObject MainWindow::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<movimientos *, std::false_type>,
         // method 'lluviap'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'lluviaproduct'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'lluviar'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -163,6 +179,8 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 2: _t->lluvia(); break;
         case 3: _t->bordescollision((*reinterpret_cast< std::add_pointer_t<movimientos*>>(_a[1]))); break;
         case 4: _t->lluviap(); break;
+        case 5: _t->lluviaproduct(); break;
+        case 6: _t->lluviar(); break;
         default: ;
         }
     }
@@ -187,13 +205,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 5)
+        if (_id < 7)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 5;
+        _id -= 7;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 5)
+        if (_id < 7)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 5;
+        _id -= 7;
     }
     return _id;
 }

@@ -22,6 +22,11 @@ float movimientos::get_posX()
     return PX;
 }
 
+void movimientos::set_posX(int x)
+{
+    PX=x;
+}
+
 float movimientos::get_posY(){//retorna la posicion en y.
     return PY;
 }
@@ -32,6 +37,11 @@ float movimientos::get_Radio(){//retorna el radio
 
 float movimientos::get_velX(){//retorna la velocidad en x.
     return VX;
+}
+
+float movimientos::set_velX(int vx)
+{
+    VX=vx;
 }
 
 float movimientos::get_velY(){//retorna la velocidad en y.

@@ -23,6 +23,8 @@ public:
     void setY(float newY);
 
     void posicion(float x_, float y_);
+    QTimer *timerm;
+
 
 private slots:
     void move();

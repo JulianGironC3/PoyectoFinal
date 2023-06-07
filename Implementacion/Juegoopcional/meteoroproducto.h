@@ -15,15 +15,25 @@ class meteoroproducto: public QObject, public QGraphicsPixmapItem
 {
     Q_OBJECT
 public:
-    meteoroproducto(QGraphicsItem* carr = 0);
+    meteoroproducto(int o, QGraphicsItem* carr = 0);
     void posicion(int x, int y);
+    QTimer *timermp;
 
+
+    int getX() const;
+    void setX(int newX);
+
+    int getY() const;
+    void setY(int newY);
+    int j=0;
 
 private slots:
     void move();
 
 private:
     QGraphicsRectItem *rect;
+    int x;
+    int y;
 };
 
 #endif // METEOROPRODUCTO_H

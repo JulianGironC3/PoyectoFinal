@@ -13,8 +13,8 @@ meteoro::meteoro(int o,QGraphicsItem *carr)
         break;
     case 3:  setPixmap(QPixmap(":/image/3.png"));
         break;
-    case 4:  setPixmap(QPixmap(":/image/4.png"));
-        break;
+    // 4:  setPixmap(QPixmap(":/image/4.png"));
+       // break;
     case 5:  setPixmap(QPixmap(":/image/5.png"));
         break;
     case 6:  setPixmap(QPixmap(":/image/6.png"));
@@ -29,11 +29,10 @@ meteoro::meteoro(int o,QGraphicsItem *carr)
 
 
     //Conexion
-    QTimer *timerm =new QTimer();
+    timerm =new QTimer();
     connect (timerm, SIGNAL(timeout()),this,SLOT(move()));
-    timerm ->start(40);
-
     qDebug() << "relog";
+    timerm->start(40);
 }
 
 void meteoro::move()

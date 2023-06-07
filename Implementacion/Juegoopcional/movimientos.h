@@ -8,10 +8,12 @@ class movimientos
 public:
     movimientos (float posX_, float posY_, float velX_, float velY_, float masa_, float radio_, float K_, float e_);
     float get_posX();
+    void set_posX(int x);
     float get_posY();
     float get_Radio();
     float get_e();
     float get_velX();
+    float set_velX(int vx);
     float get_velY();
     float get_masa();
     void set_vel(float velx, float vely, float px, float py);

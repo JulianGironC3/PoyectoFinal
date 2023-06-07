@@ -26,6 +26,8 @@ public:
     int getY() const;
     void setY(int newY);
 
+    QTimer *timermp;
+
 private slots:
     void move();
 

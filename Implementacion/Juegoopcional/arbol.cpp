@@ -2,7 +2,7 @@
 
 arbol::arbol(QGraphicsItem* carr):QGraphicsPixmapItem(carr)
 {
-    setPixmap(QPixmap(":/image/png-clipart-animation-cartoon-cartoon-tree-template-child.png"));
+    setPixmap(QPixmap(":/image/Arbol.png"));
 
 }
 

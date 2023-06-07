@@ -2,9 +2,9 @@
 
 poder::poder(QGraphicsItem *carr)
 {
-    setPixmap(QPixmap(":/image/5542.png_860.png"));
+    setPixmap(QPixmap(":/image/poder.png"));
 
-    QTimer *timermp =new QTimer();
+    timermp =new QTimer();
     connect (timermp, SIGNAL(timeout()),this,SLOT(move()));
     timermp ->start(40);
 

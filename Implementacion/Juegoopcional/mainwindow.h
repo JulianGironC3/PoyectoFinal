@@ -17,6 +17,9 @@
 #include "poder.h"
 #include "arbol.h"
 #include "meteoroproducto.h"
+#include "multiplicacion.h"
+#include "respuesta.h"
+#include "perder.h"
 
 #include <iostream>
 
@@ -40,23 +43,30 @@ public slots:
     void lluvia();
     void bordescollision(movimientos *b);
     void lluviap();
+    void lluviaproduct();
+    void lluviar();
 
 private:
     Ui::MainWindow *ui;
     QGraphicsScene *scene;
+    multiplicacion *multiplicacionm;
     obstaculo *rect;
     personaje *player;
     arbol *arbol1;
     arbol *arbol2;
     hongo *hongo1;
+    hongo *hongo2;
     QTimer *timerll;
     QTimer *timerp;
     QTimer *timerllp;
+    QTimer *timeres;
+    QTimer *timerpro;
     int h_limit;                //longitud en X del mundo
     int v_limit;
-    QList<meteoro*> lluviam;
+    QList<meteoro*> lluviam; //meteoros lluvia
     QList<poder*> poderm;
     QList<meteoroproducto*> productos;
+    QList<respuesta*> productosres;
 
 
 
