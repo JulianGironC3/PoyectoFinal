@@ -12,7 +12,7 @@ personaje::personaje()
     float posx, posy, velx , vely ,r, mass, K, e;
     posx = 0;
     posy = 150;
-    r = 50;
+    r = 120;
     mass = 50;
     velx = 0;
     vely = 0;
@@ -31,13 +31,13 @@ void personaje::paint(QPainter *painter, const QStyleOptionGraphicsItem *option,
 {
     //painter->setBrush(Qt::cyan);        //asigna el color
     //painter->drawRect (boundingRect());    //dibuja una elipse encerrada en la boundingRect
-    QPixmap qpixmap(":/image/asset-generation-edefd626-2631-4eb9-9d5e-bae60f6dc727-3-small.jpg");
-    painter->drawPixmap(0,0,50,50,qpixmap);
+    QPixmap qpixmap(":/image/personajeorg.png");
+    painter->drawPixmap(0,0,120,120,qpixmap);
 }
 
 QRectF personaje::boundingRect() const
 {
-    return QRectF(0,0,50,50);
+    return QRectF(0,0,120,120);
 }
 
 void personaje::setEscala(float s)

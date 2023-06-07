@@ -76,27 +76,27 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
 
     movimientos *b = player->getEsf();
     if (event->key() == Qt::Key_D ){
-        b->set_vel(20,b->get_velY(),b->get_posX(), b->get_posY());
+        b->set_vel(15,b->get_velY(),b->get_posX(), b->get_posY());
 
-
+/*
         if (player->collidesWithItem(hongo1) or player->collidesWithItem(hongo2)){
             b->set_posX(b->get_posX()-5);
             b->set_vel(0,0,b->get_posX()-5,b->get_posY());
             //b->set_vel(-1*b->get_e()*b->get_velX(),b->get_velY(),b->get_Radio(), b->get_posY());
 
-        }
+        }*/
     }
 
     if (event->key() == Qt::Key_A ){
-        b->set_vel(-20,b->get_velY(),b->get_posX(), b->get_posY());
-
+        b->set_vel(-15,b->get_velY(),b->get_posX(), b->get_posY());
+/*
         if (player->collidesWithItem(hongo1) or player->collidesWithItem(hongo2)){
             b->set_posX(b->get_posX()+5);
             b->set_vel(0,0,b->get_posX()+5,b->get_posY());
 
             //b->set_vel(b->get_e()*b->get_velX(),b->get_velY(), b->get_Radio(), b->get_posY()) ;//con el borde izquierdo
 
-        }
+        }*/
     }
 
 
